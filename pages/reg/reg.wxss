@@ -1,0 +1,3 @@
+/* pages/reg/reg.wxss */
+@import '../wxss/weui.wxss';
+@import '../wxss/example.wxss';

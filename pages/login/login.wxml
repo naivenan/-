@@ -1,0 +1,27 @@
+<!--pages/login/login.wxml-->
+<view class='weui-cells weui-cells_form'>
+  <view class='weui-cell'>
+    <view class='weui-cell__hd'>
+      <text class='weui-label'>账号</text>
+    </view>
+    <view class='weui-cell__hd'>
+      <input class='weui-input' type="text" bindinput='userInput' focus='true'
+        placeholder='请输入账号'></input>
+    </view>
+  </view>
+
+  <view class='weui-cell'>
+    <view class='weui-cell__hd'>
+      <text class='weui-label'>密码</text>
+    </view>
+    <view class='weui-cell__hd'>
+      <input class='weui-input' type="password" bindinput='pswdInput'
+        placeholder='请输入密码'></input>
+    </view>
+  </view>
+
+  <view class="weui-btn-area">
+    <button id="showTooltips" class="weui-btn weui-btn_primary" bindtap='login'>登录</button>
+    <button id="showTooltips" class="weui-btn weui-btn_primary" bindtap='register'>注册</button>
+  </view>
+</view>
