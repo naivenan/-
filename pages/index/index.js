@@ -20,9 +20,14 @@ Page({
       url: '../bindUser/bindUser'
     })
   },
-  getLocation: function () {
+  location: function () {
     wx.navigateTo({
       url: '../home/index'
+    })
+  },
+  message: function () {
+    wx.navigateTo({
+      url: '../message/message'
     })
   },
   logout: function() {
