@@ -27,7 +27,7 @@ Page({
   f: function () {
     var result = this.confirm(this.data.user, this.data.pswd);
     if (result) {
-      wx.redirectTo({
+      wx.switchTab({
         url: '../index/index',
         
       });

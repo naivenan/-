@@ -1,33 +1,27 @@
-// pages/message/message.js
+// pages/user/user.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    inputShowed: false,
-    inputVal: ""
+  
   },
-  showInput: function () {
-    this.setData({
-      inputShowed: true
-    });
+
+  location: function () {
+    wx.switchTab({
+      url: '../home/home'
+    })
   },
-  hideInput: function () {
-    this.setData({
-      inputVal: "",
-      inputShowed: false
-    });
+  message: function () {
+    wx.switchTab({
+      url: '../message/message'
+    })
   },
-  clearInput: function () {
-    this.setData({
-      inputVal: ""
-    });
-  },
-  inputTyping: function (e) {
-    this.setData({
-      inputVal: e.detail.value
-    });
+  logout: function () {
+    wx.redirectTo({
+      url: '../login/login'
+    })
   },
 
   /**

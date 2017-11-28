@@ -4,72 +4,90 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    user: null,
+    olderList: [],
+    alertList: [
+      { pic: '../../images/icon/user.png', name: '老大', desc: '摔倒了！' },
+      { pic: '../../images/icon/user.png', name: '老二', desc: '摔倒了！' },
+    ],
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   bindUser: function () {
     wx.navigateTo({
       url: '../bindUser/bindUser'
     })
   },
-  location: function () {
+  deleteUser: function () {
     wx.navigateTo({
-      url: '../home/index'
+      url: '../deleteUser/deleteUser'
     })
   },
-  message: function () {
-    wx.navigateTo({
-      url: '../message/message'
-    })
+  refresh: function () {
+    this.getOlderList();
+    this.getAlertList();
   },
-  logout: function() {
-    wx.redirectTo({
-      url: '../login/login'
-    })
-  },
-  
+
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    this.getOlderList();
+    this.getAlertList();
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  getOlderList: function (param) {
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      olderList: app.globalData.olderList
     })
+  },
+  getAlertList: function (param) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    console.log('onReady...');
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    console.log('onShow...');
+    this.getOlderList();
+    this.getAlertList();
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    console.log('onHide...');
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+    console.log('onUnload...');
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

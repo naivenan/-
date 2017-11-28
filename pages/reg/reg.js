@@ -9,6 +9,7 @@ Page({
     pswd: null,
     tel: null,
     token: null,
+    different:false,
   },
   back: function () {
     wx.navigateBack({
@@ -65,6 +66,18 @@ Page({
     this.setData({
       pswd: e.detail.value
     })
+  },
+  pswdInput2: function (e) {
+    var input = e.detail.value;
+    if(this.data.pswd != input){
+      this.setData({
+        different: true
+      })
+    }else{
+      this.setData({
+        different: false
+      })
+    }
   },
   telInput: function (e) {
     this.setData({

@@ -2,35 +2,55 @@
 @import '../wxss/weui.wxss';
 
 .userinfo {
-    display: flex;
-      flex-direction: column;
-        align-items: center; 
-}
-
-.userinfo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.title{
+  margin-left: 10px;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.weui-grid {
+  position: relative;
+  float: left;
+  padding: 10px 10px;
+  width: 25%;
+  box-sizing: border-box;
+  border-right: 1rpx solid #d9d9d9;
+  border-bottom: 1rpx solid #d9d9d9;
 }
 
-.usermotto {
-  margin-top: 20px;
+.icon{
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px;
+}
+
+.weui-panel__hd {
+  padding-left: 10px 10px 10px;
+  color: red;
+  font-size: 15px;
+  position: relative;
+}
+
+.weui-media-box__hd_in-appmsg {
+  margin-right: 0.8em;
+  width: 30px;
+  height: 30px;
+  line-height: 60px;
   text-align: center;
 }
 
-button{
-  width: 60%;
-  margin: 20px auto;
+.text{
+  margin: 10px 10px;
   text-align: center;
+}
+
+.btlist{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }

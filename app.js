@@ -34,6 +34,14 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    olderList: [
+      { name: '老大' }, { name: '老二' }, { name: '老三' }, { name: '老四' }, { name: '老五' },
+      { name: '小六' }, { name: '小七' },
+    ],
+    alertList: [
+      { pic: '../../images/icon/user.png', name: '老大', desc: '摔倒了！' },
+      { pic: '../../images/icon/user.png', name: '老二', desc: '摔倒了！' },
+    ],
   }
 })
