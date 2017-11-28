@@ -8,7 +8,8 @@
     "pages/home/index",
     "pages/location/location",
     "pages/location-detail/location",
-    "pages/bindUser/bindUser"
+    "pages/bindUser/bindUser",
+    "pages/message/message"
   ],
   "window":{
     "backgroundTextStyle":"light",

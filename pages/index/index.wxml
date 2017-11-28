@@ -7,9 +7,10 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <button class='weui-btn weui-btn_primary' bindtap='bindUser'>绑定老人账号</button>
-  <button class='weui-btn weui-btn_default' bindtap='getLocation'>查询老人位置</button>
-  <button class='weui-btn weui-btn_warn' bindtap='logout'>退出</button>
+  <button class='b1' bindtap='bindUser'>绑定老人账号</button>
+  <button class='b2' bindtap='location'>查看老人位置</button>
+  <button class='b2' bindtap='message'>消息</button>
+  <button class='b3' bindtap='logout'>退出</button>
   <view class="usermotto">
     <text class="user-motto">欢迎使用防走失小程序</text>
   </view>
