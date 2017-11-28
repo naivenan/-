@@ -7,7 +7,8 @@
     "pages/logs/logs",
     "pages/home/index",
     "pages/location/location",
-    "pages/location-detail/location"
+    "pages/location-detail/location",
+    "pages/bindUser/bindUser"
   ],
   "window":{
     "backgroundTextStyle":"light",

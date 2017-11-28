@@ -290,7 +290,7 @@ a{
 }
 button.weui-btn,
 input.weui-btn{
-  width:100%;
+  width:60%;
   border-width:0;
   outline:0;
   -webkit-appearance:none;
